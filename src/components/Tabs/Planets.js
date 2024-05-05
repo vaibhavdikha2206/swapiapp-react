@@ -19,14 +19,14 @@ export default function Planets() {
       setLoading(false);
     }*/
 
-    async function fetchPeople() {
+    async function fetchPlanets() {
       setLoading(true);
       const data = await fetchDataFromAPIFromText("planets");
       setPlanetsFetched(data.results);
       setLoading(false);
     }
 
-    fetchPeople();
+    fetchPlanets();
   }, []);
 
   return (

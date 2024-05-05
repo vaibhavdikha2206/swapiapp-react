@@ -11,21 +11,21 @@ export default function Films() {
   const [loading, setLoading] = useState([]);
 
   useEffect(() => {
-    async function fetchFilms(){
+    /*async function fetchFilms(){
       setLoading(true);
       console.log("fetch people called");
       let res = await fetch('https://swapi.dev/api/films/?format=json')
       let data = await res.json();
       setFilmsFetched(data.results);
       setLoading(false);
-    }
-
-    /*async function fetchPeople() {
-      setLoading(true);
-      const data = await fetchDataFromAPIFromText("planets");
-      setPlanetsFetched(data.results);
-      setLoading(false);
     }*/
+
+    async function fetchFilms() {
+      setLoading(true);
+      const data = await fetchDataFromAPIFromText("films");
+      setFilmsFetched(data.results);
+      setLoading(false);
+    }
 
     fetchFilms();
   }, []);

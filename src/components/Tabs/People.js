@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Grid } from "semantic-ui-react";
 import { useState, useEffect } from "react";
 import { Menu, Container, Dimmer, Loader } from "semantic-ui-react";
-import { fetchDataFromAPI } from "../../service/apiservice";
+import { fetchDataFromAPIFromText } from "../../service/apiservice";
 import PeopleCard from "../CardComponents/PeopleCard";
 
 export default function People() {
@@ -21,7 +21,7 @@ export default function People() {
 
     async function fetchPeople() {
       setLoading(true);
-      const data = await fetchDataFromAPI("value");
+      const data = await fetchDataFromAPIFromText("people");
       setPeopleFetched(data.results);
       setLoading(false);
     }

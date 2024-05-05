@@ -11,21 +11,13 @@ export default function Vehicles() {
   const [loading, setLoading] = useState([]);
 
   useEffect(() => {
-    async function fetchVehicles(){
+    
+    async function fetchVehicles() {
       setLoading(true);
-      console.log("fetch people called");
-      let res = await fetch('https://swapi.dev/api/vehicles/?format=json')
-      let data = await res.json();
+      const data = await fetchDataFromAPIFromText("vehicles");
       setVehiclesFetched(data.results);
       setLoading(false);
     }
-
-    /*async function fetchPeople() {
-      setLoading(true);
-      const data = await fetchDataFromAPIFromText("planets");
-      setPlanetsFetched(data.results);
-      setLoading(false);
-    }*/
 
     fetchVehicles();
   }, []);

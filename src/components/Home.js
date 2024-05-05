@@ -94,7 +94,7 @@ export default function Home() {
       ) : 
         <div>
           <div className="container" style={{ display: "flex", alignItems: "center" }}>
-          <h1 style={{ marginRight: "20px" }}>Hey. This Website uses the SWAPI service . We can search using the buttons given below .
+          <h1 style={{ marginRight: "20px" }}>Hey Swapi ! . This Website uses the SWAPI service . We can search using the buttons given below .
           Based on Type you can get the type of items , for example : "people" or "planets"
           </h1>
           </div>

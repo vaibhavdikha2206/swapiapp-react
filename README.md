@@ -3,6 +3,7 @@
 This is a UI Layer that the user interacts with . It interacts with the underlying the SWAPI Spring App to fetch required responses .
 
 Project Structure : 
+
 ![image](https://github.com/vaibhavdikha2206/swapiapp-react/assets/56227319/35608007-212e-46a3-8c71-6f812d8983bf)
 
 This app is following a component-based architecture.
